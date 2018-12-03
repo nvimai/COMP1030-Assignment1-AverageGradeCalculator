@@ -87,7 +87,7 @@ namespace AverageGradeCalculator
             {
                 if (percentGrade >= gradeBands[i].minPercentage && percentGrade <= gradeBands[i].maxPercentage)
                 {
-                    //return F if percentGrade from 0 to 49
+                    //return the letter Grade and Color if percentGrade meets the band
                     letterGrade = gradeBands[i].letterGrade;
                     colorGrade = gradeBands[i].colorGrade;
                     return true;
