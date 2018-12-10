@@ -71,10 +71,10 @@ namespace AverageGradeCalculator
             gradeBands = new GradeBand[]
             {
                 new GradeBand {minPercentage = 80, maxPercentage = 100, letterGrade = "A", colorGrade = Color.Green },
-                new GradeBand {minPercentage = 70, maxPercentage = 79, letterGrade = "B", colorGrade = Color.Yellow },
-                new GradeBand {minPercentage = 60, maxPercentage = 69, letterGrade = "C", colorGrade = Color.Orange },
-                new GradeBand {minPercentage = 50, maxPercentage = 59, letterGrade = "D", colorGrade = Color.OrangeRed },
-                new GradeBand {minPercentage = 0, maxPercentage = 49, letterGrade = "F", colorGrade = Color.Red }
+                new GradeBand {minPercentage = 70, maxPercentage = 80, letterGrade = "B", colorGrade = Color.Yellow },
+                new GradeBand {minPercentage = 60, maxPercentage = 70, letterGrade = "C", colorGrade = Color.Orange },
+                new GradeBand {minPercentage = 50, maxPercentage = 60, letterGrade = "D", colorGrade = Color.OrangeRed },
+                new GradeBand {minPercentage = 0, maxPercentage = 50, letterGrade = "F", colorGrade = Color.Red }
             };
         }
 
@@ -85,7 +85,7 @@ namespace AverageGradeCalculator
             colorGrade = Color.Black;
             for (int i = 0; i < gradeBands.Length; i++)
             {
-                if (percentGrade >= gradeBands[i].minPercentage && percentGrade <= gradeBands[i].maxPercentage)
+                if (percentGrade >= gradeBands[i].minPercentage && percentGrade < gradeBands[i].maxPercentage)
                 {
                     //return the letter Grade and Color if percentGrade meets the band
                     letterGrade = gradeBands[i].letterGrade;
